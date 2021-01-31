@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicManager.Client", "Cl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicManager.Shared", "Shared\DynamicManager.Shared.csproj", "{99880D85-490F-415F-9B71-03BF1BDBDC57}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database", "Database\Database.csproj", "{E510F071-6D63-47FB-97D2-8496844EBD58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicManager.Database", "Database\DynamicManager.Database.csproj", "{682DE168-81A6-4020-B32C-F1577BCE467C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{99880D85-490F-415F-9B71-03BF1BDBDC57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99880D85-490F-415F-9B71-03BF1BDBDC57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99880D85-490F-415F-9B71-03BF1BDBDC57}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E510F071-6D63-47FB-97D2-8496844EBD58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E510F071-6D63-47FB-97D2-8496844EBD58}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E510F071-6D63-47FB-97D2-8496844EBD58}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E510F071-6D63-47FB-97D2-8496844EBD58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{682DE168-81A6-4020-B32C-F1577BCE467C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{682DE168-81A6-4020-B32C-F1577BCE467C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{682DE168-81A6-4020-B32C-F1577BCE467C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{682DE168-81A6-4020-B32C-F1577BCE467C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
