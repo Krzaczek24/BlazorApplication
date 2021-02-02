@@ -1,3 +1,4 @@
+using DynamicManager.Database;
 using DynamicManager.Server.Data;
 using DynamicManager.Server.Models;
 using Microsoft.AspNetCore.Authentication;
@@ -34,6 +35,12 @@ namespace DynamicManager.Server
 
             services.AddAuthentication()
                 .AddIdentityServerJwt();
+
+            services.AddDbContext<AppDbContext>(options =>
+            {
+                options.UseLazyLoadingProxies();
+                options.UseMySQL(Configuration.GetConnectionString("DefaultConnection"));
+            });
 
             services.AddControllersWithViews();
             services.AddRazorPages();
