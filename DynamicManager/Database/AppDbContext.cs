@@ -12,12 +12,16 @@ namespace DynamicManager.Database
     public class AppDbContext : DbContext
     {
         public virtual DbSet<DbUser> Users { get; set; }
+        public virtual DbSet<DbDictionary> Dictionaries { get; set; }
+        public virtual DbSet<DbTag> Tags { get; set; }
+        public virtual DbSet<DbFieldType> FieldTypes { get; set; }
+        public virtual DbSet<DbFieldValidationRule> FieldValidationRules { get; set; }
+        public virtual DbSet<DbFormTemplate> FormTemplates { get; set; }
+        public virtual DbSet<DbFormField> FormFields { get; set; }
         public virtual DbSet<DbForm> Forms { get; set; }
+        public virtual DbSet<DbFormData> FormData { get; set; }
 
-        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
-        {
-
-        }
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

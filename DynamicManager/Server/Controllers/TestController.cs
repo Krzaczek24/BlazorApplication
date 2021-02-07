@@ -1,6 +1,12 @@
 ﻿using DynamicManager.Database;
+using DynamicManager.Database.Models.Base;
+using DynamicManager.Shared.Tools;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
 using Microsoft.Extensions.Logging;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace DynamicManager.Server.Controllers
@@ -19,14 +25,37 @@ namespace DynamicManager.Server.Controllers
             _db = db;
         }
 
-        [HttpGet("test-db-connection")]
-        public IActionResult TestDbConnection()
+        [HttpGet("check-api-connection")]
+        public IActionResult CheckApiConnection()
         {
-            var form = _db.Forms.FirstOrDefault();
-            form.Title += "X";
-            _db.SaveChanges();
+            return Ok(new { message = "Test połączenia zakończony pomyślnie" });
+        }
 
-            return Json(new { message = "OK" });
+        [HttpGet("check-db-connection")]
+        public IActionResult CheckDbConnection()
+        {
+            var result = new List<object>();
+            var entities = _db.GetType().GetProperties().Where(p => p.PropertyType.IsGenericType).Select(p => p.Name).ToList();            
+
+            foreach (var entity in entities)
+            {
+                try
+                {
+                    var records = AssemblyHelper.GetObjectPropertyValue<IEnumerable<object>>(_db, entity);
+                    result.Add(new { entity, success = true, count = records.Count() });
+                }
+                catch (Exception ex)
+                {
+                    result.Add(new { entity, success = false, error = ex.Message });
+                    _logger.LogError(ex, $"Wystąpił błąd podczas próby sprawdzenia tabeli [{entity}]");
+                }
+            }
+
+            return Json(new { 
+                entitiesCount = result.Count, 
+                success = result.All(x => ((dynamic)x).success), 
+                entities = result
+            });
         }
     }
 }
