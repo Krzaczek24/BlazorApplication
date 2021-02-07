@@ -8,10 +8,9 @@ namespace DynamicManager.Server.Data
 {
     public class AuthDbContext : ApiAuthorizationDbContext<ApplicationUser>
     {
-        public AuthDbContext(
-            DbContextOptions options,
-            IOptions<OperationalStoreOptions> operationalStoreOptions) : base(options, operationalStoreOptions)
+        public AuthDbContext(DbContextOptions<AuthDbContext> options, IOptions<OperationalStoreOptions> operationalStoreOptions) : base(options, operationalStoreOptions)
         {
+
         }
     }
 }
