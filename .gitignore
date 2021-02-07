@@ -352,3 +352,6 @@ MigrationBackup/
 # Visual Paradigm
 *.vpp.bak*
 *.vpp.lck*
+
+# MySQL Workbench
+*.mwb.bak
