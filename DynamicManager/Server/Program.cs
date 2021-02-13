@@ -15,6 +15,8 @@ namespace DynamicManager.Server
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+                    webBuilder.UseKestrel();
+                    webBuilder.UseUrls("https://0.0.0.0:5001");                    
                 });
     }
 }
