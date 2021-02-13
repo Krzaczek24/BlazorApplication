@@ -1,6 +1,6 @@
 {
 	"pathTemplates": {
-		"processName": "DynamicManager.__project__.exe"
+		"processName": "DynamicManager.__project__.exe",
 		"project": "DynamicManager\\__project__\\DynamicManager.__project__.csproj",
 		"executable": "DynamicManager\\__project__\\bin\\Release\\netcoreapp3.1\\publish\\DynamicManager.__project__.exe"
 	},
