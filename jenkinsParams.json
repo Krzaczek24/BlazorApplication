@@ -1,5 +1,6 @@
 {
 	"pathTemplates": {
+		"processName": "DynamicManager.__project__.exe"
 		"project": "DynamicManager\\__project__\\DynamicManager.__project__.csproj",
 		"executable": "DynamicManager\\__project__\\bin\\Release\\netcoreapp3.1\\publish\\DynamicManager.__project__.exe"
 	},
@@ -7,6 +8,7 @@
 		{
 			"name": "Client",
 			"order": 4,
+			"processNameTemplate": "processName",
 			"projectPathTemplate": "project",
 			"executablePathTemplate": "executable",
 			"toRestart": false
@@ -14,6 +16,7 @@
 		{
 			"name": "Database",
 			"order": 1,
+			"processNameTemplate": "processName",
 			"projectPathTemplate": "project",
 			"executablePathTemplate": "executable",
 			"toRestart": false
@@ -21,6 +24,7 @@
 		{
 			"name": "Server",
 			"order": 3,
+			"processNameTemplate": "processName",
 			"projectPathTemplate": "project",
 			"executablePathTemplate": "executable",
 			"toRestart": true
@@ -28,6 +32,7 @@
 		{
 			"name": "Shared",
 			"order": 2,
+			"processNameTemplate": "processName",
 			"projectPathTemplate": "project",
 			"executablePathTemplate": "executable",
 			"toRestart": false
