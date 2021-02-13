@@ -1,6 +1,4 @@
 {
-	"gitPath": "https://github.com/Krzaczek24/BlazorApplication.git",
-	"dotNetPath": "\"C:\\Program Files\\dotnet\\dotnet.exe\"",
 	"pathTemplates": {
 		"default": "DynamicManager\\__project__\\DynamicManager.__project__.csproj"
 	},
