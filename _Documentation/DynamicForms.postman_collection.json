@@ -1,0 +1,60 @@
+{
+	"info": {
+		"_postman_id": "55f9df38-3954-4dbe-9809-75434ff2ede0",
+		"name": "DynamicForms",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "TestController",
+			"item": [
+				{
+					"name": "Test/check-db-connection",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://127.0.0.1:5001/Test/check-db-connection",
+							"protocol": "https",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"Test",
+								"check-db-connection"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Test/check-api-connection",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://127.0.0.1:5001/Test/check-api-connection",
+							"protocol": "https",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"Test",
+								"check-api-connection"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
